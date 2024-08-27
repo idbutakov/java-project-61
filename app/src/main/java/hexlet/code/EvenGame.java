@@ -3,10 +3,10 @@ package hexlet.code;
 import java.util.Random;
 import java.util.Scanner;
 
-public class IsEvenCalculation {
+public class EvenGame {
     public static void isEven() {
-        String name = User.getName();
-        User.greetByName(name);
+        String name = GreetGame.getName();
+        GreetGame.greetByName(name);
 
         for (int i = 0; i < 3; i++) {
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");

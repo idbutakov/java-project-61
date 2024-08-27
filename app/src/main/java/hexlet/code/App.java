@@ -18,11 +18,11 @@ public class App {
                 break;
             case 1:
                 System.out.println("Welcome to the Brain Games!");
-                String name = Greeting.getName();
-                Greeting.greetByName(name);
+                String name = GreetGame.getName();
+                GreetGame.greetByName(name);
                 break;
             case 2:
-                IsEvenCalculation.isEven();
+                EvenGame.isEven();
                 break;
             default:
                 break;
