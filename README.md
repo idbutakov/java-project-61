@@ -3,4 +3,5 @@
 <a href="https://codeclimate.com/github/idbutakov/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/3dc3e1ec52a700c85ca0/maintainability" /></a>
 
 Example of running Even game:
+
 <img src="/app/src/main/resources/RunEvenExample.png" width=50% height=50%>
