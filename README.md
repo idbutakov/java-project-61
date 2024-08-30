@@ -13,3 +13,7 @@ Example of running Calc game:
 Example of running GCD game:
 
 <img src="/app/src/main/resources/GCDGame.png" width=30% height=30%>
+
+Example of running Progression game:
+
+<img src="/app/src/main/resources/ProgressionGame.png" width=30% height=30%>
