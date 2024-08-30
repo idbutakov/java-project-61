@@ -12,6 +12,7 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
 
         Scanner scanner = new Scanner(System.in);
@@ -35,6 +36,9 @@ public class App {
                 break;
             case 5:
                 ProgressionGame.findMissingNumber();
+                break;
+            case 6:
+                PrimeGame.checkPrime();
                 break;
             default:
                 break;

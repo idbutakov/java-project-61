@@ -7,6 +7,7 @@ import java.util.Random;
 public class GCDGame {
     public static void findGCD() {
         String userName = Engine.startGame();
+        System.out.println("Find the greatest common divisor of given numbers.");
 
         Random r = new Random();
         String[] questions = new String[Engine.ROUNDS_COUNT];

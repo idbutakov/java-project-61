@@ -7,6 +7,7 @@ import java.util.Random;
 public class CalcGame {
     public static void calculate() {
         String userName = Engine.startGame();
+        System.out.println("What is the result of the expression?");
 
         Random r = new Random();
         String[] questions = new String[Engine.ROUNDS_COUNT];

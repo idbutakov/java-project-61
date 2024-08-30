@@ -7,6 +7,7 @@ import java.util.Random;
 public class ProgressionGame {
     public static void findMissingNumber() {
         String userName = Engine.startGame();
+        System.out.println("What number is missing in the progression?");
 
         Random r = new Random();
         String[] questions = new String[Engine.ROUNDS_COUNT];

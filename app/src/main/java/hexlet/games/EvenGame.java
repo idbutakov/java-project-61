@@ -7,6 +7,7 @@ import java.util.Random;
 public class EvenGame {
     public static void isEven() {
         String userName = Engine.startGame();
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         Random r = new Random();
         String[] questions = new String[Engine.ROUNDS_COUNT];
