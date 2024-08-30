@@ -4,8 +4,12 @@
 
 Example of running Even game:
 
-<img src="/app/src/main/resources/EvenGame.png" width=50% height=50%>
+<img src="/app/src/main/resources/EvenGame.png" width=30% height=30%>
 
 Example of running Calc game:
 
-<img src="/app/src/main/resources/CalcGame.png" width=50% height=50%>
+<img src="/app/src/main/resources/CalcGame.png" width=30% height=30%>
+
+Example of running GCD game:
+
+<img src="/app/src/main/resources/GCDGame.png" width=30% height=30%>
