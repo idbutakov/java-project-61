@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class GCDGame {
-    private final static int MAX_RANDOM_NUMBER = 100;
+    private static final int MAX_RANDOM_NUMBER = 100;
 
     public static void findGCD() {
         String userName = Engine.startGame();

@@ -10,6 +10,14 @@ import hexlet.games.PrimeGame;
 import java.util.Scanner;
 
 public class App {
+    private static final int CHOICE_ZERO = 0;
+    private static final int CHOICE_ONE = 1;
+    private static final int CHOICE_TWO = 2;
+    private static final int CHOICE_THREE = 3;
+    private static final int CHOICE_FOUR = 4;
+    private static final int CHOICE_FIVE = 5;
+    private static final int CHOICE_SIX = 6;
+
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -25,24 +33,24 @@ public class App {
         System.out.println("Your choice: " + gameNumber);
 
         switch (gameNumber) {
-            case 0:
+            case CHOICE_ZERO:
                 break;
-            case 1:
+            case CHOICE_ONE:
                 GreetGame.greetByName();
                 break;
-            case 2:
+            case CHOICE_TWO:
                 EvenGame.isEven();
                 break;
-            case 3:
+            case CHOICE_THREE:
                 CalcGame.calculate();
                 break;
-            case 4:
+            case CHOICE_FOUR:
                 GCDGame.findGCD();
                 break;
-            case 5:
+            case CHOICE_FIVE:
                 ProgressionGame.findMissingNumber();
                 break;
-            case 6:
+            case CHOICE_SIX:
                 PrimeGame.checkPrime();
                 break;
             default:

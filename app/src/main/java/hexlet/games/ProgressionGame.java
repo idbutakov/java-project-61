@@ -5,10 +5,10 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class ProgressionGame {
-    private final static int MAX_PROGRESSION_LENGTH = 6;
-    private final static int MAX_PROGRESSION_LENGTH_ADDED = 5;
-    private final static int MAX_START = 5;
-    private final static int MAX_STEP = 5;
+    private static final int MAX_PROGRESSION_LENGTH = 6;
+    private static final int MAX_PROGRESSION_LENGTH_ADDED = 5;
+    private static final int MAX_START = 5;
+    private static final int MAX_STEP = 5;
 
     public static void findMissingNumber() {
         String userName = Engine.startGame();

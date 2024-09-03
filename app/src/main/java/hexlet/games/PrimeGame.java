@@ -5,8 +5,8 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class PrimeGame {
-    private final static int MAX_RANDOM_NUMBER = 100;
-    private final static int MAX_PRIME = 3;
+    private static final int MAX_RANDOM_NUMBER = 100;
+    private static final int MAX_PRIME = 3;
 
     public static void checkPrime() {
         String userName = Engine.startGame();

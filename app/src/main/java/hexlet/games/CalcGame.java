@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class CalcGame {
-    private final static int MAX_RANDOM_NUMBER = 100;
+    private static final int MAX_RANDOM_NUMBER = 100;
 
     public static void calculate() {
         String userName = Engine.startGame();
