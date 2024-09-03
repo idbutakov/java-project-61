@@ -5,6 +5,11 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class ProgressionGame {
+    private final static int MAX_PROGRESSION_LENGTH = 6;
+    private final static int MAX_PROGRESSION_LENGTH_ADDED = 5;
+    private final static int MAX_START = 5;
+    private final static int MAX_STEP = 5;
+
     public static void findMissingNumber() {
         String userName = Engine.startGame();
         System.out.println("What number is missing in the progression?");
@@ -14,9 +19,9 @@ public class ProgressionGame {
         String[] correctAnswers = new String[Engine.ROUNDS_COUNT];
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            int progressionLength = r.nextInt(6) + 5;
-            int start = r.nextInt(50);
-            int step = r.nextInt(10) + 1;
+            int progressionLength = r.nextInt(MAX_PROGRESSION_LENGTH) + MAX_PROGRESSION_LENGTH_ADDED;
+            int start = r.nextInt(MAX_START);
+            int step = r.nextInt(MAX_STEP) + 1;
             int hiddenIndex = r.nextInt(progressionLength);
 
             int[] progression = new int[progressionLength];

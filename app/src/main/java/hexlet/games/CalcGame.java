@@ -5,6 +5,8 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class CalcGame {
+    private final static int MAX_RANDOM_NUMBER = 100;
+
     public static void calculate() {
         String userName = Engine.startGame();
         System.out.println("What is the result of the expression?");
@@ -15,8 +17,8 @@ public class CalcGame {
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int randomCase = r.nextInt(Engine.ROUNDS_COUNT);
-            int randomNumberOne = r.nextInt(100);
-            int randomNumberTwo = r.nextInt(100);
+            int randomNumberOne = r.nextInt(MAX_RANDOM_NUMBER);
+            int randomNumberTwo = r.nextInt(MAX_RANDOM_NUMBER);
             int correctAnswer = 0;
             String operation = "";
 
