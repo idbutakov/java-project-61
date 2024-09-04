@@ -1,11 +1,11 @@
 package hexlet.code;
 
-import hexlet.games.CalcGame;
-import hexlet.games.EvenGame;
-import hexlet.games.GCDGame;
-import hexlet.games.GreetGame;
-import hexlet.games.ProgressionGame;
-import hexlet.games.PrimeGame;
+import hexlet.code.games.CalcGame;
+import hexlet.code.games.EvenGame;
+import hexlet.code.games.GCDGame;
+import hexlet.code.games.GreetGame;
+import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.PrimeGame;
 
 import java.util.Scanner;
 
@@ -36,22 +36,22 @@ public class App {
             case CHOICE_ZERO:
                 break;
             case CHOICE_ONE:
-                GreetGame.greetByName();
+                GreetGame.start();
                 break;
             case CHOICE_TWO:
-                EvenGame.isEven();
+                EvenGame.start();
                 break;
             case CHOICE_THREE:
-                CalcGame.calculate();
+                CalcGame.start();
                 break;
             case CHOICE_FOUR:
-                GCDGame.findGCD();
+                GCDGame.start();
                 break;
             case CHOICE_FIVE:
-                ProgressionGame.findMissingNumber();
+                ProgressionGame.start();
                 break;
             case CHOICE_SIX:
-                PrimeGame.checkPrime();
+                PrimeGame.start();
                 break;
             default:
                 break;
