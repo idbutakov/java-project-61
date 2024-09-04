@@ -4,9 +4,9 @@ public final class QuestionAnswerPair {
     private final String question;
     private final String answer;
 
-    public QuestionAnswerPair(String question, String answer) {
-        this.question = question;
-        this.answer = answer;
+    public QuestionAnswerPair(String sQuestion, String sAnswer) {
+        this.question = sQuestion;
+        this.answer = sAnswer;
     }
 
     public String getQuestion() {
