@@ -4,20 +4,20 @@
 
 Example of running Even game:
 
-<img src="/app/src/main/resources/EvenGame.png" width=30% height=30%>
+<img src="/app/src/Screenshots/EvenGame.png" width=30% height=30%>
 
 Example of running Calc game:
 
-<img src="/app/src/main/resources/CalcGame.png" width=30% height=30%>
+<img src="/app/src/Screenshots/CalcGame.png" width=30% height=30%>
 
 Example of running GCD game:
 
-<img src="/app/src/main/resources/GCDGame.png" width=30% height=30%>
+<img src="/app/src/Screenshots/GCDGame.png" width=30% height=30%>
 
 Example of running Progression game:
 
-<img src="/app/src/main/resources/ProgressionGame.png" width=30% height=30%>
+<img src="/app/src/Screenshots/ProgressionGame.png" width=30% height=30%>
 
 Example of running Prime game:
 
-<img src="/app/src/main/resources/PrimeGame.png" width=30% height=30%>
+<img src="/app/src/Screenshots/PrimeGame.png" width=30% height=30%>
