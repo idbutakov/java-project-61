@@ -16,19 +16,19 @@ public class Engine {
         return userName;
     }
 
-    public static void runGame(String userName, String[] questions, String[] correctAnswers) {
+    public static void runGame(String userName, QuestionAnswerPair[] questionAnswerPairs) {
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 0; i < ROUNDS_COUNT; i++) {
-            System.out.println("Question: " + questions[i]);
+            System.out.println("Question: " + questionAnswerPairs[i].getQuestion());
             String userAnswer = scanner.nextLine();
             System.out.println("Your answer: " + userAnswer);
 
-            if (userAnswer.equals(correctAnswers[i])) {
+            if (userAnswer.equals(questionAnswerPairs[i].getAnswer())) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + userAnswer + "' is the wrong answer ;(. Correct answer was '"
-                        + correctAnswers[i] + "'.");
+                        + questionAnswerPairs[i].getAnswer() + "'.");
                 System.out.println("Let's try again, " + userName + "!");
                 return;
             }
