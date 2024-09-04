@@ -6,6 +6,7 @@ import hexlet.code.QuestionAnswerPair;
 import java.util.Random;
 
 public class CalcGame {
+    private static final int MAX_RANDOM_CASE = 3;
     private static final int MAX_RANDOM_NUMBER = 100;
 
     public static void start() {
@@ -16,7 +17,7 @@ public class CalcGame {
         QuestionAnswerPair[] questionAnswerPairs = new QuestionAnswerPair[Engine.ROUNDS_COUNT];
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            int randomCase = r.nextInt(3);
+            int randomCase = r.nextInt(MAX_RANDOM_CASE);
             int randomNumberOne = r.nextInt(MAX_RANDOM_NUMBER);
             int randomNumberTwo = r.nextInt(MAX_RANDOM_NUMBER);
 

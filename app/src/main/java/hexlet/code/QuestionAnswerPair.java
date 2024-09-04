@@ -1,6 +1,6 @@
 package hexlet.code;
 
-public class QuestionAnswerPair {
+public final class QuestionAnswerPair {
     private final String question;
     private final String answer;
 
