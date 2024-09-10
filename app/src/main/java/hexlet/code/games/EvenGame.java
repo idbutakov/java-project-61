@@ -4,6 +4,8 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class EvenGame {
+    private static final int MAX_RANDOM = 100;
+
     public static void start() {
         String userName = Engine.startGame();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
@@ -11,7 +13,7 @@ public class EvenGame {
         String[][] questionsAndAnswers = new String[Engine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            int randomNumber = Utils.getRandomInt(0, 100);
+            int randomNumber = Utils.getRandomInt(0, MAX_RANDOM);
             String question = String.valueOf(randomNumber);
             String correctAnswer = getCorrectAnswer(randomNumber);
 

@@ -8,6 +8,7 @@ import java.util.Random;
 public class ProgressionGame {
     private static final int MAX_PROGRESSION_LENGTH = 6;
     private static final int MAX_PROGRESSION_LENGTH_ADDED = 5;
+    private static final int MAX_RANDOM = 5;
 
     public static void start() {
         String userName = Engine.startGame();
@@ -18,8 +19,8 @@ public class ProgressionGame {
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int progressionLength = r.nextInt(MAX_PROGRESSION_LENGTH) + MAX_PROGRESSION_LENGTH_ADDED;
-            int start = Utils.getRandomInt(0, 5);
-            int step = Utils.getRandomInt(0, 5) + 1;
+            int start = Utils.getRandomInt(0, MAX_RANDOM);
+            int step = Utils.getRandomInt(0, MAX_RANDOM) + 1;
             int hiddenIndex = r.nextInt(progressionLength);
 
             int[] progression = generateProgression(progressionLength, start, step);

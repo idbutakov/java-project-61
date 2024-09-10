@@ -4,6 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class PrimeGame {
+    private static final int MAX_RANDOM = 100;
     private static final int MAX_PRIME = 3;
 
     public static void start() {
@@ -13,7 +14,7 @@ public class PrimeGame {
         String[][] questionsAndAnswers = new String[Engine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            int randomNumber = Utils.getRandomInt(0, 100);
+            int randomNumber = Utils.getRandomInt(0, MAX_RANDOM);
 
             String[] questionAndAnswer = generateQuestionAndAnswer(randomNumber);
 

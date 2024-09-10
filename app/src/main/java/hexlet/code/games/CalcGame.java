@@ -4,6 +4,8 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class CalcGame {
+    private static final int MAX_RANDOM = 100;
+
     public static void start() {
         String userName = Engine.startGame();
         System.out.println("What is the result of the expression?");
@@ -12,8 +14,8 @@ public class CalcGame {
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int randomCase = Utils.getRandomInt(0, 2);
-            int randomNumberOne = Utils.getRandomInt(0, 100);
-            int randomNumberTwo = Utils.getRandomInt(0, 100);
+            int randomNumberOne = Utils.getRandomInt(0, MAX_RANDOM);
+            int randomNumberTwo = Utils.getRandomInt(0, MAX_RANDOM);
 
             String question = generateQuestion(randomNumberOne, randomNumberTwo, randomCase);
             int correctAnswer = calculateCorrectAnswer(randomNumberOne, randomNumberTwo, randomCase);
