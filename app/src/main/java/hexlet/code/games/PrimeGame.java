@@ -1,39 +1,33 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.QuestionAnswerPair;
-
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class PrimeGame {
-    private static final int MAX_RANDOM_NUMBER = 100;
     private static final int MAX_PRIME = 3;
 
     public static void start() {
         String userName = Engine.startGame();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
-        Random r = new Random();
-        QuestionAnswerPair[] questionAnswerPairs = new QuestionAnswerPair[Engine.ROUNDS_COUNT];
+        String[][] questionsAndAnswers = new String[Engine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            int randomNumber = r.nextInt(MAX_RANDOM_NUMBER) + 1;
+            int randomNumber = Utils.getRandomInt(0, 100);
 
-            String question = generateQuestion(randomNumber);
-            String correctAnswer = calculateCorrectAnswer(randomNumber);
+            String[] questionAndAnswer = generateQuestionAndAnswer(randomNumber);
 
-            questionAnswerPairs[i] = new QuestionAnswerPair(question, correctAnswer);
+            questionsAndAnswers[i][0] = questionAndAnswer[0];
+            questionsAndAnswers[i][1] = questionAndAnswer[1];
         }
 
-        Engine.runGame(userName, questionAnswerPairs);
+        Engine.runGame(userName, questionsAndAnswers);
     }
 
-    private static String generateQuestion(int number) {
-        return String.valueOf(number);
-    }
-
-    private static String calculateCorrectAnswer(int number) {
-        return isPrime(number) ? "yes" : "no";
+    private static String[] generateQuestionAndAnswer(int number) {
+        String question = String.valueOf(number);
+        String correctAnswer = isPrime(number) ? "yes" : "no";
+        return new String[]{question, correctAnswer};
     }
 
     private static boolean isPrime(int num) {

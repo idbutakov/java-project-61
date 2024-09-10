@@ -1,29 +1,25 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.QuestionAnswerPair;
-
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class EvenGame {
-    private static final int MAX_RANDOM_NUMBER = 100;
-
     public static void start() {
         String userName = Engine.startGame();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
-        Random r = new Random();
-        QuestionAnswerPair[] questionAnswerPairs = new QuestionAnswerPair[Engine.ROUNDS_COUNT];
+        String[][] questionsAndAnswers = new String[Engine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            int randomNumber = r.nextInt(MAX_RANDOM_NUMBER);
+            int randomNumber = Utils.getRandomInt(0, 100);
             String question = String.valueOf(randomNumber);
             String correctAnswer = getCorrectAnswer(randomNumber);
 
-            questionAnswerPairs[i] = new QuestionAnswerPair(question, correctAnswer);
+            questionsAndAnswers[i][0] = question;
+            questionsAndAnswers[i][1] = correctAnswer;
         }
 
-        Engine.runGame(userName, questionAnswerPairs);
+        Engine.runGame(userName, questionsAndAnswers);
     }
 
     private static String getCorrectAnswer(int number) {

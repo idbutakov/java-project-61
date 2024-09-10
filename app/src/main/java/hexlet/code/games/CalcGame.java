@@ -1,33 +1,28 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.QuestionAnswerPair;
-
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class CalcGame {
-    private static final int MAX_RANDOM_CASE = 3;
-    private static final int MAX_RANDOM_NUMBER = 100;
-
     public static void start() {
         String userName = Engine.startGame();
         System.out.println("What is the result of the expression?");
 
-        Random r = new Random();
-        QuestionAnswerPair[] questionAnswerPairs = new QuestionAnswerPair[Engine.ROUNDS_COUNT];
+        String[][] questionsAndAnswers = new String[Engine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            int randomCase = r.nextInt(MAX_RANDOM_CASE);
-            int randomNumberOne = r.nextInt(MAX_RANDOM_NUMBER);
-            int randomNumberTwo = r.nextInt(MAX_RANDOM_NUMBER);
+            int randomCase = Utils.getRandomInt(0, 2);
+            int randomNumberOne = Utils.getRandomInt(0, 100);
+            int randomNumberTwo = Utils.getRandomInt(0, 100);
 
             String question = generateQuestion(randomNumberOne, randomNumberTwo, randomCase);
-            String correctAnswer = calculateCorrectAnswer(randomNumberOne, randomNumberTwo, randomCase);
+            int correctAnswer = calculateCorrectAnswer(randomNumberOne, randomNumberTwo, randomCase);
 
-            questionAnswerPairs[i] = new QuestionAnswerPair(question, correctAnswer);
+            questionsAndAnswers[i][0] = question;
+            questionsAndAnswers[i][1] = String.valueOf(correctAnswer);
         }
 
-        Engine.runGame(userName, questionAnswerPairs);
+        Engine.runGame(userName, questionsAndAnswers);
     }
 
     private static String generateQuestion(int numberOne, int numberTwo, int operationType) {
@@ -44,17 +39,15 @@ public class CalcGame {
         return numberOne + operation + numberTwo;
     }
 
-    private static String calculateCorrectAnswer(int numberOne, int numberTwo, int operationType) {
-        int correctAnswer;
+    private static int calculateCorrectAnswer(int numberOne, int numberTwo, int operationType) {
         if (operationType == 0) {
-            correctAnswer = numberOne + numberTwo;
+            return numberOne + numberTwo;
         } else if (operationType == 1) {
-            correctAnswer = numberOne - numberTwo;
+            return numberOne - numberTwo;
         } else if (operationType == 2) {
-            correctAnswer = numberOne * numberTwo;
+            return numberOne * numberTwo;
         } else {
             throw new IllegalArgumentException("Invalid operation type: " + operationType);
         }
-        return String.valueOf(correctAnswer);
     }
 }
